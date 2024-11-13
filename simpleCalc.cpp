@@ -31,7 +31,7 @@ int main() {
 
 void twoTerms(string s) {
     int a, b;
-    cout << "2. Put the numbers: (ex. 30 9)" << endl;
+    cout << "2. Put the numbers: (for example: 30 9)" << endl;
     cin >> a >> b;
     cout << "" << endl;
     //
@@ -55,7 +55,7 @@ void twoTerms(string s) {
 
 void oneTerm(string s) {
     int a;
-    cout << "2. Put the number: (ex. 30 9)" << endl;
+    cout << "2. Put the number: (for example: 16)" << endl;
     cin >> a;
     cout << "" << endl;
     //
