@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-void oneTerm();
+void oneTerm(string s);
 
 void twoTerms(string s);
 
@@ -13,13 +13,13 @@ int main() {
     //
     //
     string s;
-    cout << "1. Put the symbol: (accepted symbols: + - * / ^ √)" << endl;
+    cout << "1. Put the symbol: (accepted symbols: + - * / ^ √ !)" << endl;
     cin >> s;
     cout << "" << endl;
     cout << "" << endl;
     //
-    if(s == "√") {
-        oneTerm();
+    if((s == "√") || (s == "!")) {
+        oneTerm(s);
     } else if((s == "+") || (s == "-") || (s == "*") || (s == "/") || (s == "^")) {
         twoTerms(s);
     } else {
@@ -31,7 +31,7 @@ int main() {
 
 void twoTerms(string s) {
     int a, b;
-    cout << "2. Put two numbers:" << endl;
+    cout << "2. Put the numbers: (ex. 30 9)" << endl;
     cin >> a >> b;
     cout << "" << endl;
     //
@@ -53,12 +53,23 @@ void twoTerms(string s) {
     };
 }
 
-void oneTerm() {
+void oneTerm(string s) {
     int a;
-    cout << "2. Put a number:" << endl;
+    cout << "2. Put the number: (ex. 30 9)" << endl;
     cin >> a;
     cout << "" << endl;
     //
     cout << "The answer is ";
-    cout << sqrt(a) << endl;
+    if(s == "√")
+        cout << sqrt(a) << endl;
+    else if(s == "!") {
+        int total = 1;
+        for(int i = 1; i <= a; i++) {
+            total = total * i;
+        };
+        cout << total << endl;
+    } else {
+        cout << "ERROR" << endl;
+        cout << "--> NOT A VALID SYMBOL" << endl;
+    }
 }
