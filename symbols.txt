@@ -1,0 +1,13 @@
+One Term
+
+√ => Square root
+! => Factorial
+
+
+Two terms
+ 
++ => Add
+- => Subtract
+* => Multiply
+/ => Divide
+^ => Power
